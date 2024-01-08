@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitation Page</title>
-  <style> button:hover, button.clicked { margin-left: 50%; transform: translateX(-50%); transition: margin-left 0.5s, transform 0.5s; } </style>
+  <style> button#button2:hover, button#button2.clicked { margin-left: 50%; transform: translateX(-50%); transition: margin-left 0.5s, transform 0.5s; } button#button2 { transition: margin-left 0.5s, transform 0.5s; } </style>
 </head>
 <body>
 
   <h1>Do you want to take Bharath out for a coffee tomorrow?</h1>
 
-  <button onclick="buttonClicked('Button 1')">Yes/button>
-  <button onmouseover="moveButtonAway()" onclick="moveButtonAway()">No/button>
+  <button onclick="buttonClicked('Button 1')">Button 1</button>
+  <button id="button2" onmouseover="moveButtonAway()" onmouseout="resetButtonPosition()" onclick="moveButtonAway()">Button 2</button>
 
-  <script> function buttonClicked(buttonName) { alert(buttonName + " clicked!"); } function moveButtonAway() { const secondButton = document.querySelector('button:last-child'); secondButton.classList.add('clicked'); } </script>
+  <script> function buttonClicked(buttonName) { alert(buttonName + " clicked!"); } function moveButtonAway() { const secondButton = document.getElementById('button2'); secondButton.classList.add('clicked'); } function resetButtonPosition() { const secondButton = document.getElementById('button2'); secondButton.classList.remove('clicked'); } </script>
 
 </body>
 </html>
