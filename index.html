@@ -10,10 +10,10 @@
 
   <h1>Do you want to take Bharath out for a coffee tomorrow?</h1>
 
-  <button onclick="buttonClicked('Button 1')">Yessss</button>
-  <button id="button2" onmouseover="moveButtonAway()" onmouseout="resetButtonPosition()" onclick="toggleButtonPosition()"> NO! </button>
+  <button onclick="buttonClicked('Button 1')">Button 1</button>
+  <button id="button2" onmouseover="moveButtonAway()" onclick="toggleButtonPosition()">Button 2</button>
 
-  <script> function buttonClicked(buttonName) { alert(buttonName + " clicked! Good Choice!!!"); } function moveButtonAway() { const secondButton = document.getElementById('button2'); secondButton.classList.add('hovered'); } function resetButtonPosition() { const secondButton = document.getElementById('button2'); secondButton.classList.remove('hovered'); } function toggleButtonPosition() { const secondButton = document.getElementById('button2'); secondButton.classList.toggle('hovered'); } </script>
+  <script> function buttonClicked(buttonName) { alert(buttonName + " clicked!"); } function moveButtonAway() { const secondButton = document.getElementById('button2'); secondButton.classList.add('hovered'); } function toggleButtonPosition() { const secondButton = document.getElementById('button2'); secondButton.classList.toggle('hovered'); } </script>
 
 </body>
 </html>
