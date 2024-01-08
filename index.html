@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitation Page</title>
-  <style> body { background-color: #e6e6fa; /* Light purple background */ margin: 0; font-family: Arial, sans-serif; } button { background-color: transparent; color: white; border: 2px solid white; /* White outline */ padding: 10px 20px; font-size: 16px; cursor: pointer; transition: transform 0.5s, opacity 0.5s; /* Added opacity transition */ } button#button2.hovered, button#button2.clicked { transform: translateX(100%); opacity: 0; /* Disappear when moved or clicked */ } button#button2.appear { transform: translateX(100%); opacity: 1; /* Reappear when in original position */ } </style>
+  <style> body { background-color: #e6e6fa; /* Light purple background */ margin: 0; font-family: Arial, sans-serif; } button { background-color: transparent; color: white; border: 2px solid white; /* White outline */ padding: 10px 20px; font-size: 16px; cursor: pointer; transition: transform 0.5s; } button#button2.hovered, button#button2.clicked { transform: translateX(100%); } </style>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
   <button onclick="buttonClickedYes()">Yes</button>
   <button id="button2" onmouseover="moveButton()" onclick="moveButton()">No</button>
 
-  <script> function buttonClickedYes() { alert("Good choice!!!"); } function moveButton() { const secondButton = document.getElementById('button2'); secondButton.classList.toggle('hovered'); secondButton.classList.toggle('appear'); setTimeout(() => { secondButton.classList.toggle('appear'); }, 500); // Delay the reappearing to synchronize with the disappearance } </script>
+  <script> function buttonClickedYes() { alert("Good choice!!!"); } function moveButton() { const secondButton = document.getElementById('button2'); secondButton.classList.toggle('hovered'); } </script>
 
 </body>
 </html>
