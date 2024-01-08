@@ -1,16 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Static Page with Buttons</title>
-  <style> button:hover, button.clicked { margin-left: 10px; /* Adjust the distance the button moves away on hover or click */ transition: margin-left 0.5s; /* Smooth transition effect */ } </style>
+  <title>Invitation Page</title>
+  <style> button:hover, button.clicked { margin-left: 50%; transform: translateX(-50%); transition: margin-left 0.5s, transform 0.5s; } </style>
 </head>
 <body>
 
-  <button onclick="buttonClicked('Button 1')">Button 1</button>
-  <button onmouseover="moveButtonAway()" onclick="moveButtonAway()">Button 2</button>
+  <h1>Do you want to take Bharath out for a coffee tomorrow?</h1>
+
+  <button onclick="buttonClicked('Button 1')">Yes/button>
+  <button onmouseover="moveButtonAway()" onclick="moveButtonAway()">No/button>
 
   <script> function buttonClicked(buttonName) { alert(buttonName + " clicked!"); } function moveButtonAway() { const secondButton = document.querySelector('button:last-child'); secondButton.classList.add('clicked'); } </script>
 
